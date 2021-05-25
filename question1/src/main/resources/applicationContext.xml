@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="constr" class="springcore_test.Address">  
+	<constructor-arg name="street" value="51,Lohianagar"></constructor-arg>  
+<constructor-arg name="city" value="Ghaziabad"></constructor-arg>  
+<constructor-arg name="state" value="UP"></constructor-arg>  
+<constructor-arg name="zip" value="521126"></constructor-arg>  
+<constructor-arg name="country" value="India"></constructor-arg> 
+  
+</bean>  
+<bean id="obj" class="springcore_test.Customer">  
+	<property name="customerId" value="10"></property>  
+<property name="customerName" value="niha"></property>  
+<property name="customerContact" value="989797897"></property>  
+<property name="customerAddress" ref="constr"></property> 
+  
+</bean> 
+
+
+
+
+
+</beans>
+
